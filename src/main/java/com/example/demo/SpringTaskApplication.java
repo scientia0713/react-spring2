@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.demo.entity.Task;
-import com.example.demo.service.TaskServiceImpl;
+import com.example.demo.entity.User;
+import com.example.demo.service.UserServiceImpl;
 
 @SpringBootApplication
 public class SpringTaskApplication {
@@ -16,13 +16,13 @@ public class SpringTaskApplication {
 	}
 	
 	@Autowired
-	TaskServiceImpl service;
+	UserServiceImpl service;
 	
 	private void execute() {
 		// TODO 自動生成されたメソッド・スタブ
-		Iterable<Task> tasks = service.selectAll();
-		for(Task task : tasks) {
-			System.out.println(task);
+		Iterable<User> users = service.selectAll();
+		for(User user : users) {
+			System.out.println(user);
 		}
 	}
 }
